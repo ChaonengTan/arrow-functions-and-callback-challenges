@@ -50,29 +50,37 @@ console.log(pi()) // -> 3.14
 
 // TODO: Convert the following functions to arrow functions: 
 
-function greet() {
-	return 'hello'
-}
+// function greet() {
+// 	return 'hello'
+// }
 
-greet()
+const greet = () => 'hello'
 
-function addSpaces(str) {
-	const outStr = str.split().join('-')
-	return outStr
-}
+console.log(greet())
+
+// function addSpaces(str) {
+// 	const outStr = str.split().join('-')
+// 	return outStr
+// }
+
+const addSpaces = str => str.split().join('-')
 
 console.log(addSpaces('Hello and welcome to functional programming'))
 
-function choose(arr) {
-	const r = Math.floor(Math.random() * arr.length)
-	return arr[r]
-}
+// function choose(arr) {
+// 	const r = Math.floor(Math.random() * arr.length)
+// 	return arr[r]
+// }
+
+const choose = arr => arr[Math.floor(Math.random() * arr.length)]
 
 console.log(choose(['Apples', 'Bananas', 'Pancakes']))
 
-function cubeArea(x, y, z) {
-	return x * y * y
-}
+// function cubeArea(x, y, z) {
+// 	return x * y * z
+// }
+
+const cubeArea = (x,y,z) => x * y * z
 
 console.log(cubeArea(5, 6, 7))
 
