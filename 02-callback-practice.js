@@ -23,7 +23,9 @@ console.log('2 ------------------------------')
 
 // TODO: use setTimeout to print a message 3 seconds in the future:
 
-
+setTimeout(() => {
+	console.log('helloWorld from 3 seconds in the past')
+}, 3000)
 
 
 console.log('3 ------------------------------')
@@ -46,10 +48,15 @@ primes.forEach((n) => {
 
 // TODO: Use foreach to double each number in the numbers array
 // print the new value to the console. 
-
+primes.forEach(n => {
+	console.log(`Double: ${n*2}`)
+})
 
 // TODO: Use forEach to print only the even numbers to the console
 // You know a number is even if n % 2 === 0
+primes.forEach(n => {
+	n%2===0 ? console.log(`Even: ${n}`) : ''
+})
 
 // The forEach method calls the provided function with the following
 // parameters: item, index, array.
@@ -72,6 +79,10 @@ primes.forEach((item, index, arr) => {
 // TODO: Use the index. Multiply each value by it's index in the array and 
 // print the value to the console
 
+primes.forEach((item, index, arr) => {
+	console.log(`elem*index: ${item*index}`)
+})
+
 
 
 console.log('5 ------------------------------')
@@ -84,7 +95,7 @@ is an item from the array. In this case a name.
 */
 const names = ['Andy', 'Boba', 'Kris', 'Dana']
 
-
+names.forEach(name => {console.log(`name: ${name}`)})
 
 
 /* ***********************************************
@@ -100,12 +111,20 @@ like this:
 
 */
 
+names.forEach((name, index, arr) => {
+	console.log(`${index+1}) ${name}`)
+})
 
 /* ************************************************
 Use forEach and setTimeout to print each name
 with a delay of 1200ms.
 */
 
+names.forEach((name, index, arr) => {
+	setTimeout(() => {
+		console.log(`${index+1}) ${name}`)
+	}, 1200)
+})
 
 console.log('6 ------------------------------')
 
@@ -122,4 +141,9 @@ console.log('6 ------------------------------')
 
 // NOTE! Do not use arr.forEach() to solve this problem! 
 
-
+const forEvery = (arr, cb) => {
+	for (elem in arr) {
+		cb(arr[elem])
+	}
+}
+console.log(forEvery(names, (name) => {console.log(`custom: ${name}`)}))
