@@ -95,7 +95,8 @@ these to print: Good morning <prefix> <name>
 for example: Good morning Mr. Mustard
 */
 
-
+const custom = (pref, name) => `Good morning ${pref} ${name}`
+console.log(custom('Awesome', 'BobTheBuilder'))
 /* ***********************************************
 If you haven't already rewrite the functions above
 on a single line
