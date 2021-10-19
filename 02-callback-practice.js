@@ -123,7 +123,7 @@ with a delay of 1200ms.
 names.forEach((name, index, arr) => {
 	setTimeout(() => {
 		console.log(`${index+1}) ${name}`)
-	}, 1200)
+	}, 1200*index)
 })
 
 console.log('6 ------------------------------')
